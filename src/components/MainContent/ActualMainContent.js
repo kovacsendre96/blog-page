@@ -14,20 +14,21 @@ const ActualMainContent = () => {
     const classes = useStyles();
     const globalStyle = globalStyles();
     const [actualContentData, setActualContentData] = useState([]);
-    const [loading,setLoading] = useState(true);
+    const [actualContentId, setActualContentId] = useState(0);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        getBlogData(setActualContentData,setLoading);
+        getBlogData(setActualContentData, setLoading, actualContentId);
     }, [])
- 
+
 
     return (
         <Grid container className={classes.root} direction="column">
             {!loading &&
-               
+
                 <React.Fragment>
                     <Typography variant="h4" className={` ${globalStyle.marginTop}`}>
-                         {actualContentData.blog_title}
+                        {actualContentData.blog_title}
                     </Typography>
 
                     <Typography variant="subtitle2" color="textSecondary" className={`${globalStyle.italicFontStyle} ${globalStyle.marginAll}`}>

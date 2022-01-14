@@ -14,9 +14,9 @@ import api from './axios';
     measurementId: "G-H02D51MG6K"
   };
   
-  export const getBlogData = (setState,setLoading) => {
+  export const getBlogData = (setState,setLoading,actualContentId) => {
     const fetchedResult = [];
-     api.get('/0.json').then((res) => {
+     api.get(`/${actualContentId}.json`).then((res) => {
        if(res.statusText == "OK"){
          setState(res.data);
          setLoading(false);
