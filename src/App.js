@@ -29,7 +29,7 @@ console.log(blogList)
           Object.values(blogList[0].blogs).map((blog,index) => { console.log(blog.blog_url)
             return (
               <>
-              <Route path="/" element={<OpenPage blogData={blogList} />} />
+              <Route path="/blog-page/" element={<OpenPage blogData={blogList} />} />
                 <Route path={`${blog.blog_url}`} element={<MainPage blog={blog} />} />
               </>
             )
