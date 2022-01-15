@@ -16,7 +16,7 @@ import api from './axios';
   
   export const getBlogData = (setState,setLoading,actualContentId) => {
     const fetchedResult = [];
-     api.get(`/${actualContentId}.json`).then((res) => {
+     api.get(`/${'0'}.json`).then((res) => {
        if(res.statusText == "OK"){
          setState(res.data);
          setLoading(false);

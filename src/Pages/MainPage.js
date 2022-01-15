@@ -14,9 +14,9 @@ const MainPage = () => {
             <Grid item xs={9}>
                 <MainContent />
             </Grid>
-            <Grid item xs={3}>
+ {/*            <Grid item xs={3}>
                 <SideContent />
-            </Grid>
+            </Grid> */}
 
         </Grid>
     );
