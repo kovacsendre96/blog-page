@@ -4,8 +4,8 @@ export const globalStyles = makeStyles((theme) => ({
     paddingBottom: {
         paddingBottom: 16
     },
-    paddingAll:{
-        padding:10
+    paddingAll: {
+        padding: 10
     },
     marginBottom: {
         marginBottom: 20
@@ -13,8 +13,8 @@ export const globalStyles = makeStyles((theme) => ({
     marginTop: {
         marginTop: 20
     },
-    marginTopSmall : {
-        paddingTop:5
+    marginTopSmall: {
+        paddingTop: 5
     },
     marginLeft: {
         marginLeft: 20
@@ -35,5 +35,8 @@ export const globalStyles = makeStyles((theme) => ({
     },
     textAlignCenter: {
         textAlign: 'center'
+    },
+    pointerCursor: {
+        cursor: 'pointer'
     }
 }));

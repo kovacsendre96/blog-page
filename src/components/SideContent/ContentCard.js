@@ -14,8 +14,10 @@ import { globalStyles } from '../../global/style';
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
-        maxHeight: 250,
-        maxWidth: 380,
+        height: 300,
+        
+        /*
+        maxWidth: 380, */
         overflow: 'hidden',
     },
     media: {
@@ -26,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const ContentCard = () => {
+const ContentCard = ({ imgUrl, blogTitle, blogDate }) => {
     const classes = useStyles();
     const globalStyle = globalStyles();
 
@@ -34,20 +36,20 @@ const ContentCard = () => {
         <Card className={classes.root}>
             <CardMedia
                 className={classes.media}
-                image="https://nlc.p3k.hu/uploads/2021/12/sisic.jpg"
+                image={imgUrl}
                 title="Paella dish"
             />
             <Grid className={classes.contentWrapper} container justifyContent='center'>
                 <CardHeader
-                    title="Shrimp and Chorizo Paella"
-                    subheader="September 14, 2016"
+                    title={blogTitle}
+                    subheader={blogDate}
                 />
-                <IconButton aria-label="add to favorites">
+{/*                 <IconButton aria-label="add to favorites">
                     <FavoriteIcon />
                 </IconButton>
                 <IconButton aria-label="share">
                     <ShareIcon />
-                </IconButton>
+                </IconButton> */}
             </Grid>
         </Card>
     );

@@ -14,11 +14,11 @@ import api from './axios';
     measurementId: "G-H02D51MG6K"
   };
   
-  export const getBlogData = (setState,setLoading,actualContentId) => {
+  export const getBlogData = (setState,setLoading,url) => {
     const fetchedResult = [];
-     api.get(`/${'0'}.json`).then((res) => {
+     api.get(`${url}.json`).then((res) => {
        if(res.statusText == "OK"){
-         setState(res.data);
+         setState([res.data]);
          setLoading(false);
        }
 /*         for (let key in res.data) {

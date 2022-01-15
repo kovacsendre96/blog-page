@@ -5,14 +5,16 @@ import MainContent from "../components/MainContent/MainContent";
 import SideContent from "../components/SideContent/SideContent";
 
 
-const MainPage = () => {
+const MainPage = ({blog}) => {
     return (
         <Grid container>
-            <Grid item xs={12}>
+{/*             <Grid item xs={12}>
                 <Header />
-            </Grid>
+            </Grid> */}
             <Grid item xs={9}>
-                <MainContent />
+                <MainContent
+                blog={blog}
+                />
             </Grid>
  {/*            <Grid item xs={3}>
                 <SideContent />

@@ -8,12 +8,14 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const MainContent = () => {
+const MainContent = ({blog}) => {
     const classes = useStyles();
     return (
         <Grid container direction="column" alignItems="center" className={classes.root}>
             <Grid item xs={11}>
-                <ActualMainContent/>
+                <ActualMainContent
+                blog={blog}
+                />
             </Grid>
         </Grid>
     );
