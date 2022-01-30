@@ -12,7 +12,7 @@ const OpenPage = ({ blogData }) => {
     const globalStyle = globalStyles();
     const navigate = useNavigate();
     const redirect = (blog_url) => {
-        navigate(`/${blog_url}`);
+        navigate(`/blog-page/${blog_url}`);
     };
 console.log(blogData)
     return (

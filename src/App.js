@@ -30,7 +30,7 @@ console.log(blogList)
             return (
               <>
               <Route path="/blog-page/" element={<OpenPage blogData={blogList} />} />
-                <Route path={`${blog.blog_url}`} element={<MainPage blog={blog} />} />
+                <Route path={`/blog-page/${blog.blog_url}`} element={<MainPage blog={blog} />} />
               </>
             )
           }

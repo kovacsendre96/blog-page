@@ -12,6 +12,8 @@ const useStyles = makeStyles((theme) => ({
 const Paragraph = ({ content }) => {
     const classes = useStyles();
     const globalStyle = globalStyles();
+    
+   
     return (
         <Typography variantMapping={"p"} className={`${globalStyle.marginAll} ${classes.root}`}>
             {content}
