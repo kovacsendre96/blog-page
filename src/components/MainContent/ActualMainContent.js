@@ -14,11 +14,10 @@ const ActualMainContent = ({ blog }) => {
     const classes = useStyles();
     const globalStyle = globalStyles();
     const actualContentData = blog;
-console.log(actualContentData);
+
     return (
         <Grid container className={classes.root} direction="column">
             {
-
                 <React.Fragment>
                     <Typography variant="h4" className={` ${globalStyle.marginTop}`}>
                         {actualContentData.blog_title}

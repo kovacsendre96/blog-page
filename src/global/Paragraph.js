@@ -1,23 +1,28 @@
-import { Grid, makeStyles, Typography } from "@material-ui/core";
+import {Grid, makeStyles, Typography} from "@material-ui/core";
 import React from "react";
-import { globalStyles } from "./style";
+import {setLinkFromText} from "./globalFunctions";
+import {globalStyles} from "./style";
 
 
 const useStyles = makeStyles((theme) => ({
     root: {
-     textAlign:'justify'
+        textAlign: 'justify'
     }
 }));
+const Paragraph = ({content, response}) => {
 
-const Paragraph = ({ content }) => {
     const classes = useStyles();
     const globalStyle = globalStyles();
-    
-   
+
     return (
-        <Typography variantMapping={"p"} className={`${globalStyle.marginAll} ${classes.root}`}>
-            {content}
-        </Typography>
+        <Typography
+            dangerouslySetInnerHTML={{__html: setLinkFromText(response?.referenceLink, response?.linkedText, content)}}
+            variantMapping={"p"}
+            className={`${globalStyle.marginAll}
+             ${classes.root}`}
+        />
+
+
     );
 };
 

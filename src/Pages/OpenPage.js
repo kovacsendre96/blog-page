@@ -14,7 +14,6 @@ const OpenPage = ({ blogData }) => {
     const redirect = (blog_url) => {
         navigate(`/blog-page/${blog_url}`);
     };
-console.log(blogData)
     return (
         <Grid container justifyContent="center">
            {/*  <Header /> */}

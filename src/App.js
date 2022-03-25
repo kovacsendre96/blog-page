@@ -16,17 +16,13 @@ const App = () => {
     getBlogData(setBlogList, setLoading, '');
   }, []);
 
-
-
-console.log(blogList)
-
   return (
     <div className="App">
 <Header/>
       <Routes>
         {
           !loading && blogList[0] !== null &&
-          Object.values(blogList[0].blogs).map((blog,index) => { console.log(blog.blog_url)
+          Object.values(blogList[0].blogs).map((blog,index) => {
             return (
               <>
               <Route path="/blog-page/" element={<OpenPage blogData={blogList} />} />
